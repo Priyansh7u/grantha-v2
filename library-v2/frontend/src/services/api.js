@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const api = axios.create({ baseURL: '/api', timeout: 10000, headers: { 'Content-Type': 'application/json' } });
+const api = axios.create({ baseURL: 'https://grantha-v2-1.onrender.com/', timeout: 10000, headers: { 'Content-Type': 'application/json' } });
 
 export const getDashboard = () => api.get('/dashboard');
 export const getAnalytics = () => api.get('/analytics');
