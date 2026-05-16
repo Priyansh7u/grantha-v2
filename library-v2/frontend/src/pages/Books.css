@@ -1,0 +1,65 @@
+.books-controls {
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 20px; flex-wrap: wrap;
+}
+.avail-toggle {
+  display: flex; align-items: center; gap: 6px;
+  font-size: .82rem; color: var(--text-2); cursor: pointer; white-space: nowrap;
+}
+.avail-toggle input { accent-color: var(--amber); }
+.view-toggle {
+  display: flex; border: 1px solid var(--border-md);
+  border-radius: var(--radius-s); overflow: hidden;
+}
+.view-toggle button {
+  padding: 7px 11px; background: none; border: none;
+  color: var(--text-3); cursor: pointer; font-size: .9rem; transition: var(--transition);
+}
+.view-toggle button.active { background: var(--bg-3); color: var(--text-1); }
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+  gap: 14px;
+}
+.book-card {
+  background: var(--bg-2); border: 1px solid var(--border);
+  border-radius: var(--radius-l); overflow: hidden;
+  transition: var(--transition);
+}
+.book-card:hover { border-color: var(--border-md); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.4); }
+.book-cover {
+  height: 140px; position: relative; cursor: pointer;
+  display: flex; align-items: flex-end;
+}
+.bc-overlay {
+  padding: 12px; background: linear-gradient(to top, rgba(0,0,0,.7) 0%, transparent 100%);
+  width: 100%;
+}
+.bc-title { font-size: .8rem; font-weight: 600; color: #fff; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.bc-author { font-size: .7rem; color: rgba(255,255,255,.7); margin-top: 2px; }
+.bc-avail { position: absolute; top: 8px; right: 8px; }
+.book-body { padding: 10px 12px 12px; }
+.book-actions { display: flex; gap: 4px; margin-top: 10px; }
+
+.list-cover { width: 28px; height: 38px; border-radius: 3px; }
+.color-sel { transform: scale(1.15) !important; }
+
+/* View modal */
+.book-view-header {
+  border-radius: var(--radius-m); padding: 20px; min-height: 100px;
+  display: flex; flex-direction: column; justify-content: flex-end;
+}
+.bvh-title { font-family: var(--font-display); font-size: 1.3rem; color: rgba(255,255,255,.95); font-weight: 400; }
+.bvh-author { font-size: .85rem; color: rgba(255,255,255,.7); margin: 3px 0 8px; }
+
+.detail-chip {
+  background: var(--bg-3); border: 1px solid var(--border);
+  border-radius: var(--radius-s); padding: 8px 10px;
+  display: flex; flex-direction: column; gap: 2px;
+}
+.tag {
+  display: inline-block; font-size: .68rem; color: var(--amber);
+  background: var(--amber-subtle); border: 1px solid var(--amber-glow);
+  border-radius: 99px; padding: 1px 7px; margin: 2px 2px 0 0;
+}

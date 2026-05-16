@@ -1,0 +1,23 @@
+.txn-tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+.txn-tab {
+  display: flex; align-items: center; gap: 7px;
+  padding: 8px 14px; border-radius: var(--radius-m);
+  background: var(--bg-2); border: 1px solid var(--border);
+  color: var(--text-2); font-size: .83rem; font-weight: 500; cursor: pointer;
+  transition: var(--transition); text-transform: capitalize;
+}
+.txn-tab:hover { border-color: var(--border-md); color: var(--text-1); }
+.txn-tab.active { background: var(--amber-subtle); border-color: var(--amber-dim); color: var(--amber); }
+.txn-tab.warn .txn-count { background: var(--red); color: #fff; }
+.txn-count {
+  background: var(--bg-4); color: var(--text-3);
+  font-size: .68rem; font-weight: 700; padding: 1px 6px; border-radius: 99px;
+}
+.txn-tab.active .txn-count { background: var(--amber); color: #000; }
+
+.overdue-text { color: var(--red) !important; font-weight: 600; }
+
+.issue-info {
+  background: var(--bg-3); border: 1px solid var(--border-md);
+  border-radius: var(--radius-m); padding: 12px 14px; margin-top: 4px;
+}
